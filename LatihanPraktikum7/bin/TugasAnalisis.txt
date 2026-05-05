@@ -1,0 +1,12 @@
+Pada kasus ini, saya menemukan error “cannot find symbol” 
+karena saya mendeklarasikan variabel alat1 dengan tipe PerangkatPintar, 
+padahal objek yang saya buat adalah LampuPintar. Saat proses kompilasi, 
+Java hanya melihat tipe referensi, bukan objek aslinya, 
+sehingga method aturKecerahan() tidak dikenali 
+karena memang tidak ada di kelas PerangkatPintar. 
+Dari sini saya memahami bahwa meskipun konsep polymorphism 
+memungkinkan perbedaan perilaku saat runtime, 
+pemanggilan method tetap dibatasi oleh tipe referensi saat compile-time.
+Untuk mengatasi masalah ini, saya bisa mengubah tipe variabel 
+menjadi LampuPintar secara langsung, 
+atau melakukan downcasting agar method aturKecerahan() bisa dipanggil tanpa error.
